@@ -1,0 +1,1002 @@
+@font-face {
+    font-family: "peydaMedium";
+    src: url(font/Peyda-Medium.ttf);
+}
+@font-face {
+    font-family: "peydaBold";
+    src: url(font/Peyda-Bold.ttf);
+}
+body {
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: 60px;
+}
+::-webkit-scrollbar {
+    background-color: none;
+    width: 10px;
+    margin: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: 0 5px 5px grey; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #4a4949; 
+    border-radius: 10px;
+  }
+.scrollProgress{
+    background-color: #f5ab35;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: scrollProgress linear;
+    animation-timeline: scroll();
+    z-index: 100;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+@keyframes scrollProgress{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 100%;
+    }
+}
+header {
+    position: fixed;
+    display: flex;
+    height: 40px;
+    background-color: #0000003c;
+    border-radius: 15px;
+    padding: 10px;
+    justify-content: space-around;
+    top: 20px;
+    right: 10px;
+    left: 10px;
+    z-index: 100;
+}
+.logo {
+    position: absolute;
+    left: -10px;
+    top: -15px;
+    cursor: pointer;
+}
+
+.boxToggle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #0000003c;
+    border-radius: 10px;
+    position: absolute;
+    right: 10px;
+    overflow: hidden;
+}
+.boxToggle button {
+    background-color: rgba(240, 255, 255, 0);
+    border: 0;
+}
+.iconToggle {
+    scale: 50%;
+}
+.content {
+    background-color: #0000003c;
+    cursor: pointer;
+    font-family: "peydaMedium";
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 110px;
+    position: absolute;
+    right: 110px;
+    z-index: 1;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+.content button{
+    background: none;
+    cursor: pointer;
+    font-family: "peydaMedium";
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 90px;
+    position: absolute;
+    right: 0;
+    display: none;
+}
+.content button a{
+    text-decoration: none;
+    color: #000000;
+}
+.content .downing lord-icon{
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+.content .downing img{
+    height: 15px;
+    position: absolute;
+    left: 30px;
+    top: 13px;
+    filter: drop-shadow(1px 1px 4px rgb(0, 0, 0));
+    transition: all .5s ease;
+}
+.inContent{
+    position: relative;
+    top: 42px;
+}
+.inContent ul{
+	position: absolute;
+	top: 0;
+	right: -4px;
+	width: 100%;
+}
+.inContent ul li {
+	position: relative;
+	list-style: none;
+    right: 0;
+	width: 100%;
+}
+.inContent ul li a{
+	position: relative;
+	display: block;
+	width: 100%;
+	display: flex;
+    right: -27px;
+	text-decoration: none;
+	color: #000000;
+ }
+.inContent ul li .aboutContent{
+	position: relative;
+	top: 6px;
+    margin-right: 2px;
+ }
+.themeToggle {
+    background-color: #0000003c;
+    border-radius: 10px;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 60px;
+}
+.toggle {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    line-height: 1;
+    scale: 80%;
+    position: absolute;
+    top: 4.5px;
+    left: 4.25px;
+}
+
+.input {
+    display: none;
+}
+
+.icon {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    transition: transform 500ms;
+}
+
+.icon--moon {
+    transition-delay: 200ms;
+}
+
+.icon--sun {
+    transform: scale(0);
+}
+
+#switch:checked + .icon--moon {
+    transform: rotate(360deg) scale(0);
+}
+
+#switch:checked ~ .icon--sun {
+    transition-delay: 200ms;
+    transform: scale(1) rotate(360deg);
+}
+.menuHeader {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60px;
+    background-color: #0000003c;
+    border-radius: 15px;
+    right: 10px;
+    bottom: 10px;
+    top: 90px;
+    overflow: hidden;
+    transition: all .5s;
+    z-index: 100;
+}
+.menuHeader .divIcon {
+    position: relative;
+    right: 0;
+    width: 100%;
+    height: 30px;
+    display: block;
+}
+.divIcon:last-of-type{
+    margin-bottom: 25px;
+}
+.menuHeader .divIcon .aboutIcons {
+    position: absolute;
+    right: 60px;
+    top: 16px;
+    font-size: 18px;
+    font-family: "peydaMedium";
+    text-align: end;
+    margin: 0;
+    cursor: pointer;
+}
+.menuHeader .divIcon .icons {
+    position: absolute;
+    right: 10px;
+    margin: 10px 0 10px 10px;
+    cursor: pointer;
+}
+.helpMenu {
+    text-align: end;
+    color: #0000003c;
+}
+.backMenuHeader {
+    display: none;
+    width: 10000px;
+    height: 10000px;
+    position: fixed;
+    top: 0;
+    right: -100px;
+    background-color: none;
+    backdrop-filter: blur(1.6px);
+    -webkit-backdrop-filter: blur(1.6px);
+    transition: all 0.5s;
+    z-index: 99;
+}
+.help {
+    cursor: pointer;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    background-color: #0000003c;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #0000003c;
+    left: 0;
+    top: 770%;
+}
+h1#adminsRank{
+    font-family: "peydaBold";
+}
+.swiper{
+    padding-left: 100px;
+    position: relative;
+    display: flex;
+    z-index: -1;
+    left: 0;
+    height: 300px;
+    top: 600px;
+}
+.swiper-slide:first-of-type {
+    padding-right: 40px;
+}
+.swiper-slide {
+    text-align: center;
+    background: #ffffff;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rankAdmin{
+  position: relative;
+  display: flex;
+  background-color: #f0f0f0;
+  width: 80%;
+  height: 170px;
+  border-radius: 15px;
+  font-family: "peydaMedium";
+}
+@media screen and (max-width: 980px) {
+.rankAdmin {
+  height: 200px;
+}
+.rankAdmin {
+    padding-left: 8px;
+}
+}
+.profileAdmin{
+  position: relative;
+  top: 20px;
+  background-color: #00000014;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.profileAdmin img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+}
+.rankNumber{
+  position: absolute;
+  bottom: -85px;
+  left: 20px;
+  font-size: 50px;
+  opacity: 50%;
+}
+.scoreAdmin{
+  width: 90%;
+  position: absolute;
+  top: 90px;
+  right: 9px;
+}
+.nameAdmin{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
+    position: absolute;
+    top: 70px;
+    right: 9px;
+}
+.swiper-slide:nth-child(1) .rankAdmin{
+  background-color: #ffd900;
+  box-shadow: 0px 0px 33px 1px #ffd90080;
+}
+.swiper-slide:nth-child(2) .rankAdmin{
+  background-color: #a5a5a5;
+  opacity: 70%;
+  box-shadow: 0px 0px 33px 1px #bfbfbf80;
+}
+.swiper-slide:nth-child(3) .rankAdmin{
+  background-color: #cd8032;
+  opacity: 80%;
+  box-shadow: 0px 0px 33px 1px #cd803280;
+}
+.swiper-slide:nth-child(n+4) .rankAdmin{
+  filter: grayscale(1);
+}
+.swiper-button-next{
+    position: absolute;
+  padding: 9px 20px 9px 14px;
+  transform: scale(70%);
+  translate: 0 9px;
+  border-radius: 50%;
+  background-color: #c7c7c7;
+  box-shadow: 0px 0px 33px 1px #5858582b;
+}
+.swiper-button-prev {
+    position: absolute;
+    padding: 9px 14px 9px 20px;
+    transform: scale(70%);
+    translate: 0 9px;
+    border-radius: 50%;   
+    background-color: #c7c7c7;
+    box-shadow: 0px 0px 33px 1px #5858582b;
+}
+.gradientSlider{
+    position: absolute;
+    height: 150%;
+    top: 0;
+    width: 50%;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 9%, rgba(0,212,255,0) 50%);
+    left: 0;
+}
+#Contents{
+    position: relative;
+    margin: auto;
+    top: 760px;
+    font-family: "peydaBold";
+
+
+}
+.allContent{
+    position: relative;
+    top: 800px;
+    margin: 0 auto;
+    justify-content: center;
+    width: 90%;
+    height: fit-content;
+    font-family: "peydaMedium";
+}
+.titleContent{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.titleContent button{
+    position: relative;
+    font-family: "peydaMedium";
+    border: none;
+    background-color: #a6a6a67b;
+    color: #000000;
+    padding: 7px;
+    border-radius: 8px;
+    cursor: pointer;
+    justify-content: center;
+    z-index: 10;
+}
+.titleContent div.actived{
+    position: relative;
+    background-color: #f6f5f5;
+    padding: 13px 7px 39px 7px;
+    border-radius: 8px;
+    translate: 0 -9px;
+}
+.changingContent{
+    position: absolute;
+    top: 60px;
+    background-color: #f6f5f5;
+    border-radius: 8px;
+    height: fit-content;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 47% 47%;
+    margin-bottom: 30px;
+    gap: 10px 20px;
+    padding-bottom: 30px;
+}
+@media screen and (max-width: 900px) {
+    .changingContent{
+        display: block;
+        padding-top: 40px;
+    }
+    }
+@media screen and (max-width: 1778px) {
+        #beforeRankingAllUsers{
+            margin-top: -230px;
+        }
+        }
+@media screen and (max-width: 1326px) {
+    #beforeRankingAllUsers{
+        margin-top: -460px;
+    }
+    }
+@media screen and (max-width: 900px) {
+    #beforeRankingAllUsers{
+        margin-top: 350px;
+    }
+    }
+@media screen and (max-width: 800px) {
+    #beforeRankingAllUsers{
+        margin-top: 150px;
+    }
+    }
+@media screen and (max-width: 600px) {
+    #beforeRankingAllUsers{
+        margin-top: 100px;
+    }
+    }
+.changingContent .videoContent {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 70%;
+    height: fit-content;
+    padding: 10px 10px 10px 10px;
+    background-color: #acacac;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0px 0px 33px rgba(0, 0, 0, .2);
+
+}
+.changingContent .videoContent video#horizontal {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 7px;
+}
+.changingContent .videoContent span .description {
+    margin: 3px 0 0 43px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.moreDescription {
+    position: absolute;
+    left: 20px;
+    translate: 0 -22px;
+    cursor: pointer;
+    color: #9a5d20;
+    font-family: "peydaMedium";
+    background: none;
+    border: none;
+}
+.downOf{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.downProfileAdmin{
+    position: absolute;
+    right: 0;
+    width: 65%;
+    height: 40px;
+}
+.downProfileAdmin img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.downProfileAdmin p{
+    position: absolute;
+    margin: 0;
+}
+.downProfileAdmin p.downNameAdmin{
+    font-size: 14px;
+    top: 0;
+    right: 45px;
+    width: calc(100% - 50px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.downProfileAdmin p.downAboutAdmin{
+    font-size: 12px;
+    width: calc(100% - 50px);
+    bottom: 0;
+    opacity: 60%;
+    right: 45px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.divDownIcons{
+    position: absolute;
+    display: flex;
+    width: 35%;
+    height: 100%;
+    left: 5px;
+    top: 4px;
+}
+.downIcons{
+    cursor: pointer;
+}
+.downProfileAdmin:hover *{
+    cursor: pointer;
+}
+
+.changingContent .imgContent {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 70%;
+    height: fit-content;
+    padding: 10px 10px 10px 10px;
+    background-color: #acacac;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0px 0px 33px rgba(0, 0, 0, .2);
+}
+.changingContent .imgContent img#horizontal {
+    width: 100%;
+    border-radius: 7px;
+}
+.changingContent .imgContent span .description {
+    margin: 3px 0 0 43px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.changingContent .imgContent span .moreDescription {
+    position: absolute;
+    left: 20px;
+    translate: 0 -22px;
+    cursor: pointer;
+    color: #cd8032;
+}
+
+.changingContent .audioContent {
+    position: relative;
+    margin: auto;
+    width: 70%;
+    height: fit-content;
+    padding: 10px;
+    background-color: #acacac;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0px 0px 33px rgba(0, 0, 0, .2);
+}
+.changingContent .audioContent span .description {
+    margin: 3px 0 0 43px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#player-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 80px;
+    background: #00000014;
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      border-radius: 7px;
+    }
+  
+    div#thumb {
+        position: absolute;
+        top: 0;
+        background-image: url("https://cldup.com/Lw6pEIsuTs.jpg");
+        left: 0;
+        width: 80px;
+        height: 100%;
+    z-index: -1;
+    height: 80px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+  /* Play / Pause */
+  
+  #player-container #play-pause {
+    cursor: pointer;
+    text-indent: -999999px;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    float: left;
+    z-index: 2;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMiAyNHYtMjRsMjAgMTItMjAgMTJ6Ii8+PC9zdmc+);
+    background-repeat: no-repeat !important;
+    background-position: center;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    background-color: transparent;
+    filter: invert(1);
+  }
+  
+  .play {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMiAyNHYtMjRsMjAgMTItMjAgMTJ6Ii8+PC9zdmc+);
+  }
+  
+  .pause {
+    
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTAgMjRoLTZ2LTI0aDZ2MjR6bTEwLTI0aC02djI0aDZ2LTI0eiIvPjwvc3ZnPg==) !important;
+  }
+  
+  /* Timeline */
+  
+  #timeline {
+    width: 100%;
+    height: 5px;
+    background: #bebebe;
+    float: left;
+    z-index: 9;
+    position: absolute;
+  }
+  
+  #scrub {
+    height: 5px;
+    background-color: #b8a07e;
+    border: none;
+    color: hsl(44, 100%, 44%);
+    float: left;
+  }
+  
+  #playhead {
+    width: 5px;
+    height: 5px;
+    background: #f0d9d6;
+  }
+  
+  /* Time */
+  .item-inner {
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 9px;
+    -ms-flex-item-align: stretch;
+    -webkit-align-self: stretch;
+    align-self: stretch;
+  }
+  #time-holder {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  div#is-right,
+  div#is-left {
+    display: inline;
+    bottom: auto;
+    padding: 3px 7px;
+    padding-left: 0;
+  }
+  
+  /* Title */
+  .item-inner .item-title {
+    -webkit-flex-shrink: 1;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    flex-shrink: 1;
+    min-width: 0;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+  
+  .item-inner .item-subtitle {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+  .changingContent .txtContent {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 70%;
+    height: fit-content;
+    padding: 10px 10px 10px 10px;
+    background-color: #acacac;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0px 0px 33px rgba(0, 0, 0, .2);
+
+}
+.changingContent .txtContent span .description{
+    margin: auto;
+    padding: 20px;
+    font-size: 14px;
+    text-align: justify;
+    text-justify: auto;
+}
+#checkbox2 {
+    display: none;
+    }
+    .toggle2 {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition-duration: .5s;
+    }
+    .bars {
+    width: 100%;
+    height: 6px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 6px;
+    }
+    
+    #bar5 {
+    transition-duration: .8s;
+    }
+    
+    #bar4,#bar6 {
+    width: 80%;
+    }
+    
+    #checkbox2:checked + .toggle2 .bars {
+    position: absolute;
+    transition-duration: .5s;
+    }
+    
+    #checkbox2:checked + .toggle2 #bar5 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+    }
+    
+    #checkbox2:checked + .toggle2 #bar4 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+    }
+    
+    #checkbox2:checked + .toggle2 #bar6 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+    }
+    
+    #checkbox2:checked + .toggle2 {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+    }
+/* حذف گرادینت خودکار در پایین ویدئو */ 
+video::-webkit-media-controls-panel { 
+    background: rgb(245,171,53);
+background: linear-gradient(0deg, rgba(245,171,53,0.7) 5%, rgba(245,171,53,0.2121848739496) 35%, rgba(245,171,53,0) 73%);
+  }
+@media only screen and (max-width: 401px) { 
+    /* استایل دکمه‌های پیش‌فرض ویدئو در موبایل */ 
+    video::-webkit-media-controls-play-button, 
+    video::-webkit-media-controls-pause-button { 
+      background-color: #f5ab35; 
+      border: none; 
+      padding: 5px; 
+      border-radius: 50%; 
+      box-shadow: none; 
+      cursor: pointer;
+      scale: 60%;
+    } 
+    video::-webkit-media-controls-play-button:focus, 
+    video::-webkit-media-controls-pause-button:focus { 
+        background-color: #f5ab35; 
+        outline: none; 
+    } 
+  }
+.popup-body p{
+    font-family: "peydaMedium";
+    min-height: auto;
+    max-height: 370px;
+    overflow-y: scroll;
+}
+.rankingAllUsers {
+    display: grid;
+    position: relative;
+    grid-template-columns: auto auto auto;
+    top: 2600px;
+}
+.OneTwoThree {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column: 1 / 4;
+}
+.swiperSlide:first-of-type {
+    margin-right: 10px;
+}
+.swiperSlide:last-of-type {
+    margin-left: 10px;
+}
+.swiperSlide {
+    text-align: center;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#beforeRankingAllUsers{
+    font-family: "peydaBold";
+    position: relative;
+    top: 2600px;
+}
+.rankUser4:nth-child(1){
+    font-family: "peydaMedium";
+    width: calc(100% - 40px);
+    position: absolute;
+    margin-top: 20px;
+    height: 50px;
+    left: 0;
+    margin-left: 10px;
+}
+.rankUser4:nth-child(2){
+    font-family: "peydaMedium";
+    width: calc(100% - 40px);
+    position: absolute;
+    margin-top: 82px;
+    height: 50px;
+    left: 0;
+    margin-left: 10px;
+}
+.rankUser4:nth-child(3){
+    font-family: "peydaMedium";
+    width: calc(100% - 40px);
+    position: absolute;
+    margin-top: 144px;
+    height: 50px;
+    left: 0;
+    margin-left: 10px;
+}
+.rankUser4:nth-child(4){
+    font-family: "peydaMedium";
+    width: calc(100% - 40px);
+    position: absolute;
+    margin-top: 206px;
+    height: 50px;
+    left: 0;
+    margin-left: 10px;
+}
+.profileUser{
+    position: absolute;
+    top: 20px;
+    background-color: #646464;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    right: 70px;
+    
+}
+.profileUser img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+}
+.rankUser{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.nameUser{
+    position: absolute;
+    top: 30px;
+    right: 125px;
+}
+hr{
+    background-color: #f0f0f0;
+    height: 1px;
+    border: none;
+    border-radius: 6px;
+}
+.rankPerson{
+    color:#f5ab35;
+}
+.rankPerson .profileUser{
+    border: 3px solid #f5ab35;
+}
+
+/* ارسال پست توسط دونفر */
+
+.downProfileAdmin:nth-child(2) img{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px .2px rgba(33, 33, 33, 0.2);
+}
+.downProfileAdmin:nth-child(2) p{
+    position: absolute;
+    margin-top: 25px;
+}
+.downProfileAdmin:nth-child(2) .downNameAdmin{
+    font-size: 14px;
+    top: 0;
+    right: 45px;
+    width: calc(100% - 50px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
