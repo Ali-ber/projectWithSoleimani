@@ -5,8 +5,13 @@ const checkbox = document.querySelector("#checkbox2");
 const themeToggle = document.querySelector(".input");
 const content = document.querySelector(".content");
 const down = document.querySelector("#down");
+const tr = document.querySelectorAll("tr");
+const option = document.querySelector(".divPresent select");
+const valueOption = parseInt(option.value);
 
-const td = document.querySelectorAll("td");
+if (valueOption > 6) {
+    tr[5].innerText = "";
+}
 
 themeToggle.checked = false;
 checkbox.checked = false;
@@ -50,14 +55,6 @@ function normal() {
     down.style.transform = "rotate(0deg)";
 }
 
-const dutyLi = document.querySelectorAll('.dutyLi');
-  function waitLi(){
-    dutyLi.forEach((item) =>
-    item.classList.remove('dutyLi'));
-    this.classList.add('wait');
-  }
-  dutyLi.forEach((item) =>
-  item.addEventListener('click',waitLi));
 
   
 // const date = new Date;
