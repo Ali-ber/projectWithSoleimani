@@ -457,6 +457,7 @@ h1#Duty{
     border-radius: 5px;
     font-family: "peydaMedium";
     padding: 5px;
+	cursor: pointer;
 }
 ul button{
     background: none;
@@ -496,6 +497,7 @@ li button{
     border-radius: 5px;
     font-family: "peydaMedium";
     padding: 5px;
+    cursor: pointer;
 }
 .divPresent button{
     position: absolute;
