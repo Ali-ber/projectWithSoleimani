@@ -496,6 +496,7 @@ h1#Present{
     background-color: #0caf2f;
     border-radius: 5px;
     display: flex;
+    cursor: pointer;
 }
 .divPresent button p{
     font-family: "peydaMedium";

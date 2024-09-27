@@ -5,6 +5,7 @@ const checkbox = document.querySelector("#checkbox2");
 const themeToggle = document.querySelector(".input");
 const content = document.querySelector(".content");
 const down = document.querySelector("#down");
+const td = document.querySelectorAll("td");
 const tr = document.querySelectorAll("tr");
 const option = document.querySelector(".divPresent select");
 const valueOption = parseInt(option.value);
@@ -57,9 +58,16 @@ function normal() {
 
 
   
-// const date = new Date;
+const date = new Date;
 
-// const myArray = date.toLocaleString("fa-IR", { dateStyle: "medium" }).split(" ", 3);
-// alert(myArray[0]); //روز
-// alert(myArray[1]); //ماه
-// //alert(myArray[2]); //سال
+const myArray = date.toLocaleString("fa-IR", { dateStyle: "medium" }).split(" ", 3);
+let day = myArray[0]; //روز
+let month = myArray[1]; //ماه
+//alert(myArray[2]); //سال
+const converter = (text) => text.replace(/[٠-٩۰-۹]/g,a=>a.charCodeAt(0)&15);
+let dayP = parseInt(converter(`${day}`));
+
+//حضور
+function presented() {
+    td[dayP - 1].classList.add("present");
+}
