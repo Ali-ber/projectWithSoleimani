@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="dashboardUser.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="نمونه ای از توضیحات متا که برای نمایش به کاربران در serp گوگل نمایش داده می شود.">
+  <link rel="icon" type="image/png" href="img/shariatifard.png"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<title>شهیدان شریعتی‌فرد</title>
+</head>
+<div class="scrollProgress"></div>
+<div class="backMenuHeader" onclick="toggleMenu()"></div>
+<div class="menuHeader">
+  <div class="divIcon">
+    <lord-icon
+    src="https://cdn.lordicon.com/lecprnjb.json"
+    trigger="hover"
+    colors="primary:#000000"
+    style="width:35px;height:35px"
+    class="icons">
+    </lord-icon>
+    <p class="aboutIcons">تنظیمات</p>
+    </div>
+</div>  
+<header class="header">
+    <div class="logo">
+      <img src="img/shariatifard.png" alt="لوگوی شهیدان شریعتی فرد" height="90px" width="85px">
+    </div>
+    <div class="boxToggle">
+        <button onclick="toggleMenu()"><div class="iconToggle">  
+        <input id="checkbox2" type="checkbox">
+<label class="toggle1 toggle2" for="checkbox2">
+  <div id="bar4" class="bars"></div>
+  <div id="bar5" class="bars"></div>
+  <div id="bar6" class="bars"></div>
+</label>
+        </div></button>
+    </div>
+    
+    <div class="content" onmouseover="contentHover()" onmouseout="normal()">
+        <div class="downing">
+          <lord-icon src="https://cdn.lordicon.com/lyrrgrsl.json" trigger="hover" colors="primary:#000000" style="width:30px;height:30px" class="icons"></lord-icon>
+          <img id="down" onclick="downUp()" src="img/down.png" alt="اطلاعات بیشتر">
+        </div>
+        <a href="#"><button>ورود/ثبت‌نام</button></a>
+        <div class="inContent" dir="RTL">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="iconContent"></span>
+              <span class="aboutContent">داشبورد</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="themeToggle">
+      <label class="toggle" for="switch">
+        <input id="switch" class="input" type="checkbox" onclick="themeToggleBody()">
+        <div class="icon icon--moon">
+          <svg height="32" width="32" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+        
+        <div class="icon icon--sun">
+          <svg height="32" width="32" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"></path>
+          </svg>
+        </div>
+      </label>
+    </div>
+  </header>
+  
+  <body class="body">
+    <div class="profile">
+      <div class="profileImg">
+        <img src="img/1.jfif" alt="profile">
+      </div>
+      <p class="profileName">علی محمدی برنجگانی</p>
+      <div class="profileS">
+
+      </div>
+    </div>
+    <h1 id="Duty" dir="rtl">وظایف‌من:</h1>
+    <div class="divDuty">
+      <div class="duty" dir="rtl">
+        <ul>
+          <li dir="rtl" class="dutyLi">معماری سایت <button><img src="img/t.png" alt="انجام شد!" height="20px"></button></li>
+          <li dir="rtl" class="dutyLi">معماری سایت <button><img src="img/t.png" alt="انجام شد!" height="20px"></button></li>
+          <li dir="rtl" class="dutyLi">معماری سایت <button><img src="img/t.png" alt="انجام شد!" height="20px"></button></li>
+          <li dir="rtl" class="dutyLi">معماری سایت <button><img src="img/t.png" alt="انجام شد!" height="20px"></button></li>
+          <li dir="rtl" class="dutyLi">معماری سایت <button><img src="img/t.png" alt="انجام شد!" height="20px"></button></li>
+          <li dir="rtl" class="dutyLi">معماری سایت <button><img src="img/t.png" alt="انجام شد!" height="20px"></button></li>
+        </ul>
+      </div>
+      <p><span>انجام‌نشده </span> <span>منتظرتایید</span> <span>تاییدشده</span></p>
+      <select id="type">
+        <option>انجام‌نشده</option>
+        <option>منتظرتایید</option>
+        <option>تاییدشده</option>
+      </select>
+    </div>
+
+    <h1 id="Present" dir="rtl">وضعیت‌حضور:</h1>
+    <div class="divPresent">
+      <table>
+        <tr>
+          <td class="before">1</td>
+          <td class="before">2</td>
+          <td class="present">3</td>
+          <td class="before">4</td>
+          <td class="before">5</td>
+          <td class="present">6</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+          <td>29</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>31</td>
+        </tr>
+        <select id="month">
+          <option>فروردین</option>
+          <option>اردیبهشت</option>
+          <option>خرداد</option>
+          <option>تیر</option>
+          <option>مرداد</option>
+          <option>شهریور</option>
+          <option>مهر</option>
+          <option>آبان</option>
+          <option>آذر</option>
+          <option>دی</option>
+          <option>بهمن</option>
+          <option>اسفند</option>
+        </select>
+        <button onclick=""><img src="img/o.png" alt="حاضر بودم!" height="24px" width="22px"><p>حاضر</p></button>
+      </table>
+    </div>
+  <footer class="footer"></footer>
+
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  
+  <script type="text/javascript" src="dashboardUser.js"></script>
+
+</body>
+</html>
