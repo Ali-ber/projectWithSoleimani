@@ -104,7 +104,7 @@
     style="width:50px;height:50px">
 </lord-icon>
         <form class="my-form">
-          <input type="file" id="fileElem" multiple accept="video/*" onchange="handleFiles(this.files)">
+          <input type="file" id="fileElem" accept="video/*" onchange="handleFiles(this.files)">
           <label class="button" for="fileElem">انتخاب‌فایل</label>
         </form>
         <progress id="progress-bar" max=100 value=0></progress>
@@ -115,7 +115,7 @@
       <p dir="rtl">باگذاری فایل‌هایی با حجم بیش از <span>25 مگابایت</span> مجاز نمی‌باشد!</p>
     </div>
     <h4 dir="rtl">توضیحات:</h4>
-    <textarea class="description" dir="rtl"></textarea>
+    <textarea name="description" class="description" dir="rtl"></textarea>
     <h4 dir="rtl">تهیه به همراه دیگران:</h4>
     <div class="searchEmail" dir="rtl">
       <input type="email" id="searchEmail" placeholder="ایمیل">

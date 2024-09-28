@@ -2,17 +2,10 @@ const body = document.querySelector(".body");
 const menuHeader = document.querySelector(".menuHeader");
 const backMenuHeader = document.querySelector(".backMenuHeader");
 const checkbox = document.querySelector("#checkbox2");
-const numberShop = document.getElementById("numberShop");
 const themeToggle = document.querySelector(".input");
-const divIcon = document.getElementById("divIcon");
 const content = document.querySelector(".content");
 const down = document.querySelector("#down");
-const downNameAdmin = document.querySelectorAll(".downOf .downNameAdmin");
-const downAboutAdmin = document.querySelectorAll(".downAboutAdmin");
 
-if (downNameAdmin.length == 2) {
-  downAboutAdmin.style.display = "none";
-}
 themeToggle.checked = false;
 checkbox.checked = false;
 function toggleMenu() {
@@ -23,7 +16,7 @@ function toggleMenu() {
         backMenuHeader.style.display = "none";
     }else{
         menuHeader.style.width = "140px";
-        backMenuHeader.style.backgroundColor = "#1f86db38";
+        backMenuHeader.style.backgroundColor = "#f5ab356c";
         backMenuHeader.style.transition = "all 0.75s";
         backMenuHeader.style.display = "block";
     }
@@ -219,26 +212,3 @@ const list = document.querySelectorAll('.list');
   }); 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const aboutIcon1 = document.getElementsByClassName("aboutIcons");
-// if (divIcon.style.width < "153.5px") {
-//     aboutIcon1.innerHTML = "";
-// }

@@ -248,10 +248,7 @@ header {
     margin: 10px 0 10px 10px;
     cursor: pointer;
 }
-.helpMenu {
-    text-align: end;
-    color: #0000003c;
-}
+
 .backMenuHeader {
     display: none;
     width: 10000px;
@@ -265,18 +262,7 @@ header {
     transition: all 0.5s;
     z-index: 10000000000000000000000000;
 }
-.help {
-    cursor: pointer;
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    padding: 5px;
-    background-color: #0000003c;
-    border-radius: 50%;
-    box-shadow: 0 0 20px #0000003c;
-    left: 0;
-    top: 770%;
-}
+
 #checkbox2 {
     display: none;
     }
@@ -396,76 +382,8 @@ header {
     font-size: 10px;
     cursor: pointer;
 }
-a{
-    color: #000000;
-}
-
-h1#Duty{
-    top: 140px;
-    position: relative;
-    font-family: "peydaBold";
-    margin: auto;
-}
-.divDuty{
-    position: relative;
-    width: 70%;
-    margin: 0 auto;
-    height: 100%;
-    padding: 15px;
-    background-color: #C3C3C2;
-    top: 150px;
-    border-radius: 20px;
-}
-.duty{
-    font-family: "peydaMedium";
-    position: relative;
-    height: 220px;
-    overflow-y: scroll;
-    padding: 15px;
-    background-color: #ffffff;
-    border-radius: 20px;
-}
-.divDuty p span{
-    font-family: "peydaMedium";
-    translate: -30px;
-}
-.divDuty p span:nth-child(1){
-    color: #000000;
-}
-.divDuty p span:nth-child(2){
-    color: #0caf2f77;
-}
-.divDuty select{
-    position: relative;
-    margin: auto;
-    border: none;
-    background-color: #f5ab35;
-    border-radius: 5px;
-    margin-top: 15px;
-    font-family: "peydaMedium";
-    padding: 5px;
-}
-ul button{
-    background: none;
-    border: none;
-}
-li{
-    position: relative;
-    right: 0;
-    margin-top: 10px;
-    text-align: start;
-}
-li button{
-    position: relative;
-    top: 5px;
-    cursor: pointer;
-}
-.okLi{
-    text-decoration-line: line-through;
-    color: #0caf2f77;
-}
-.okLi button{
-    display: none;
+.profile a{
+    color: #ffffff;
 }
 .divPresent{
     position: relative;
@@ -474,7 +392,7 @@ li button{
     height: max-content;
     padding: 15px 15px 45px 15px;
     background-color: #C3C3C2;
-    top: 260px;
+    top: 200px;
     text-align: center;
     border-radius: 20px;
 }
@@ -499,7 +417,7 @@ table {
     border: 1px solid #a80303;
 }
 h1#Present{
-    top: 250px;
+    top: 190px;
     position: relative;
     font-family: "peydaBold";
     margin: auto;
@@ -611,4 +529,7 @@ h1#Activity{
 }
 .label{
     font-size: 9px;
+}
+a{
+    color: #000000;
 }

@@ -1,0 +1,214 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- Demo styles -->
+  <style>
+    @font-face {
+    font-family: "peydaMedium";
+    src: url(font/Peyda-Medium.ttf);
+}
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper{
+      width: 100%;
+      height: 300px;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .rankAdmin{
+      position: relative;
+      display: flex;
+      background-color: #f0f0f0;
+      width: 80%;
+      height: 140px;
+      border-radius: 15px;
+      font-family: "peydaMedium";
+      /* overflow: hidden; */
+    }
+    @media screen and (max-width: 980px) {
+    .rankAdmin {
+      height: 180px;
+    }
+  }
+    .profileAdmin{
+      position: relative;
+      top: 20px;
+      background-color: #c74242;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 0 auto;
+      overflow: hidden;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+    .profileAdmin img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 60px;
+    }
+    .rankNumber{
+      position: absolute;
+      bottom: -148px;
+      left: 10px;
+      font-size: 90px;
+      opacity: 50%;
+    }
+    .scoreAdmin{
+      width: 90%;
+      position: absolute;
+      top: 75px;
+      right: 9px;
+    }
+    .swiper-slide:nth-child(1) .rankAdmin{
+      background-color: #ffd900;
+      box-shadow: 0px 0px 33px 1px #ffd90080;
+    }
+    .swiper-slide:nth-child(2) .rankAdmin{
+      background-color: #a5a5a5;
+      opacity: 70%;
+      box-shadow: 0px 0px 33px 1px #bfbfbf80;
+    }
+    .swiper-slide:nth-child(3) .rankAdmin{
+      background-color: #cd8032;
+      opacity: 80%;
+      box-shadow: 0px 0px 33px 1px #cd803280;
+    }
+    .swiper-slide:nth-child(n+4) .rankAdmin{
+      filter: grayscale(1);
+    }
+    .swiper-button-next{
+      padding: 9px 20px 9px 14px;
+      transform: scale(70%);
+      translate: 0 -9px;
+      border-radius: 50%;
+      color: #ffffff;
+      background-color: #c7c7c7;
+      box-shadow: 0px 0px 33px 1px #5858582b;
+    }
+    .swiper-button-prev{
+      padding: 9px 14px 9px 20px;
+      transform: scale(70%);
+      translate: 0 -9px;
+      border-radius: 50%;
+      color: #ffffff;
+      background-color: #c7c7c7;
+      box-shadow: 0px 0px 33px 1px #5858582b;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden" dir="rtl">
+    <div class="swiper-wrapper" id="swiper-wrapper-7ef982ab935a71fe" aria-live="polite">
+      <div class="swiper-slide" role="group" aria-label="3 / 10">
+        <div class="rankAdmin">
+          <div class="profileAdmin"><img src="img/basic-django.png" alt=""></div>
+          <p class="scoreAdmin">
+            <span>امتیاز:</span>
+            <span>122222222</span>
+          </p>
+          <p class="rankNumber">01</p>
+        </div>
+      </div>  
+      <div class="swiper-slide" role="group" aria-label="3 / 10">
+        <div class="rankAdmin">
+          <div class="profileAdmin"><img src="img/basic-django.png" alt=""></div>
+          <p class="scoreAdmin">
+            <span>امتیاز:</span>
+            <span>122222222</span>
+          </p>
+          <p class="rankNumber">01</p>
+        </div>
+      </div>  
+      <div class="swiper-slide" role="group" aria-label="3 / 10">
+        <div class="rankAdmin">
+          <div class="profileAdmin"><img src="img/basic-django.png" alt=""></div>
+          <p class="scoreAdmin">
+            <span>امتیاز:</span>
+            <span>122222222</span>
+          </p>
+          <p class="rankNumber">01</p>
+        </div>
+      </div>  
+      <div class="swiper-slide" role="group" aria-label="3 / 10">
+        <div class="rankAdmin">
+          <div class="profileAdmin"><img src="img/809a244d-6916-4977-8374-72b37c33940d.jfif" alt=""></div>
+          <p class="scoreAdmin">
+            <span>امتیاز:</span>
+            <span>122222222</span>
+          </p>
+          <p class="rankNumber">01</p>
+        </div>
+      </div>  
+      <div class="swiper-slide" role="group" aria-label="3 / 10">
+        <div class="rankAdmin">
+          <div class="profileAdmin"><img src="img/basic-django.png" alt=""></div>
+          <p class="scoreAdmin">
+            <span>امتیاز:</span>
+            <span>122222222</span>
+          </p>
+          <p class="rankNumber">01</p>
+        </div>
+      </div>  
+        
+    </div>
+    <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-7ef982ab935a71fe" aria-disabled="false"></div>
+    <div class="swiper-button-next swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-7ef982ab935a71fe" aria-disabled="true"></div>
+  <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper', {
+      slidesPerView: 3,
+      direction: getDirection(),
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      on: {
+        
+      },
+    });
+
+    function getDirection() {
+      var windowWidth = window.innerWidth;
+      var direction = window.innerWidth <= 260 ? 'vertical' : 'horizontal';
+
+      return direction;
+    }
+  </script>
+
+
+
+</body></html>

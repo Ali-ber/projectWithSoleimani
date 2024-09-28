@@ -22,17 +22,13 @@ body {
     margin: 5px;
   }
   
-  ::-webkit-scrollbar-track {
-    box-shadow: 0 5px 5px grey; 
-  }
-   
   ::-webkit-scrollbar-thumb {
     background: #4a4949; 
     border-radius: 10px;
   }
 .scrollProgress{
     background-color: #f5ab35;
-    width: 100%;
+    width: 0px;
     position: fixed;
     top: 0;
     left: 0;
@@ -62,7 +58,7 @@ header {
     top: 20px;
     right: 10px;
     left: 10px;
-    z-index: 100;
+    z-index: 1000000000000000000000000002;
 }
 .logo {
     position: absolute;
@@ -222,7 +218,7 @@ header {
     top: 90px;
     overflow: hidden;
     transition: all .5s;
-    z-index: 100;
+    z-index: 100000000000000000000000001;
 }
 .menuHeader .divIcon {
     position: relative;
@@ -262,10 +258,10 @@ header {
     top: 0;
     right: -100px;
     background-color: none;
-    backdrop-filter: blur(1.6px);
-    -webkit-backdrop-filter: blur(1.6px);
+    backdrop-filter: blur(3.6px);
+    -webkit-backdrop-filter: blur(3.6px);
     transition: all 0.5s;
-    z-index: 99;
+    z-index: 10000000000000000000000000;
 }
 .help {
     cursor: pointer;
@@ -544,6 +540,7 @@ h1#adminsRank{
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    z-index: 100;
 }
 .downProfileAdmin p{
     position: absolute;
@@ -557,16 +554,18 @@ h1#adminsRank{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    z-index: 100;
 }
 .downProfileAdmin p.downAboutAdmin{
     font-size: 12px;
     width: calc(100% - 50px);
     bottom: 0;
-    opacity: 60%;
+    color: #4a4949;
     right: 45px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    z-index: 0;
 }
 .divDownIcons{
     position: absolute;
@@ -999,4 +998,10 @@ hr{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    z-index: 1000;
+}
+.downProfileAdmin:nth-child(2) .downAboutAdmin{
+    background-color: #acacac;
+    color: #acacac;
+    z-index: 1;
 }

@@ -364,6 +364,7 @@ top: 6px;
   width: 40%;
   margin: 5px;
   font-family: "peydaMedium";
+  cursor: pointer;
 }
 .downOfEdit button:nth-child(2){
   background-color: #ac0000;

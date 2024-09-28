@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="dashboardUser.css">
+  <link rel="stylesheet" href="UserDashboard.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="نمونه ای از توضیحات متا که برای نمایش به کاربران در serp گوگل نمایش داده می شود.">
@@ -12,16 +12,72 @@
 <div class="scrollProgress"></div>
 <div class="backMenuHeader" onclick="toggleMenu()"></div>
 <div class="menuHeader">
+
+
   <div class="divIcon">
-    <lord-icon
-    src="https://cdn.lordicon.com/lecprnjb.json"
+    <a href=""><lord-icon
+    src="https://cdn.lordicon.com/hrjifpbq.json"
     trigger="hover"
     colors="primary:#000000"
-    style="width:35px;height:35px"
+    style="width:36px;height:36px"
     class="icons">
     </lord-icon>
-    <p class="aboutIcons">تنظیمات</p>
+    <p class="aboutIcons">صفحه‌من</p></a>
     </div>
+
+  <div class="divIcon">
+    <a href=""><lord-icon
+    src="https://cdn.lordicon.com/jcepibgt.json"
+    trigger="hover"
+    colors="primary:#000000"
+    style="width:36px;height:36px"
+    class="icons">
+    </lord-icon>
+    <p class="aboutIcons">امتیازها</p></a>
+    </div>
+
+
+  <div class="divIcon">
+    <a href=""><lord-icon
+      src="https://cdn.lordicon.com/ofzpbawy.json"
+    trigger="hover"
+    stroke="bold"
+    colors="primary:#ffffff,secondary:#000000,tertiary:#000000,quaternary:#000000"
+    style="width:36px;height:36px"
+    class="icons">
+    </lord-icon>
+    <p class="aboutIcons">چالش‌ها</p></a>
+    </div>
+
+    
+    <div class="divIcon">
+      <a href=""><lord-icon
+        src="https://cdn.lordicon.com/wmlleaaf.json"
+        trigger="hover"
+        colors="primary:#000000"
+        style="width:36px;height:36px"
+        class="icons">
+      </lord-icon>
+    <p class="aboutIcons">حاضری‌بزن</p></a>
+  </div>
+
+  <div class="divIcon">
+    <a href=""><lord-icon
+    src="https://cdn.lordicon.com/ayhtotha.json"
+    trigger="hover"
+    colors="primary:#000000"
+    style="width:36px;height:36px"
+    class="icons">
+    </lord-icon>
+    <p class="aboutIcons">پشتیبانی</p></a>
+    </div>
+  
+  <div class="divIcon">
+    <a href=""><img src="img/logout.png" alt="logout" style="width:36px;height:36px" class="icons">
+    <p class="aboutIcons" style="color: #C00202;">خروج</p></a>
+    </div>
+
+
 </div>  
 <header class="header">
     <div class="logo">
@@ -90,64 +146,7 @@
       
       </div>
     </div>
-    <h1 id="Duty" dir="rtl">وظایف‌من</h1>
-    <div class="divDuty">
-      <div class="duty" dir="rtl">
-        <ul>
-          <li dir="rtl" class="dutyLi">معماری سایت</li>
-          <li dir="rtl" class="dutyLi">معماری سایت</li>
-          <li dir="rtl" class="dutyLi">معماری سایت</li>
-          <li dir="rtl" class="dutyLi">معماری سایت</li>
-          <li dir="rtl" class="dutyLi">معماری سایت</li>
-          <li dir="rtl" class="dutyLi">معماری سایت</li>
-        </ul>
-      </div>
-      <select dir="rtl" id="type">
-        <option>انجام‌نشده</option>
-        <option>انجام‌شده</option>
-      </select>
-    </div>
 
-    <h1 id="Activity" dir="rtl">عمللکردمن</h1>
-    <div class="divActivity">
-      <select dir="rtl">
-        <option>این‌هفته</option>
-      </select>
-      <div class="simple-bar-chart">
-
-        <div class="item" style="--clr: #f5ab35; --val: 10">
-            <div class="label">شنبه</div>
-            <div class="value">1</div>
-        </div>
-        <div class="item" style="--clr: #f5ab35; --val: 30">
-            <div class="label">یکشنبه</div>
-            <div class="value">3</div>
-        </div>
-        <div class="item" style="--clr: #f5ab35; --val: 100">
-            <div class="label">دوشنبه</div>
-            <div class="value">10</div>
-        </div>
-        <div class="item" style="--clr: #f5ab35; --val: 100">
-            <div class="label">سه‌شنبه</div>
-            <div class="value">11</div>
-        </div>
-        <div class="item" style="--clr: #f5ab35; --val: 50">
-            <div class="label">چهارشنبه</div>
-            <div class="value">5</div>
-        </div>
-        <div class="item" style="--clr: #f5ab35; --val: 90">
-            <div class="label">پنجشنبه</div>
-            <div class="value">9</div>
-        </div>
-        <div class="item" style="--clr: #f5ab35; --val: 70">
-            <div class="label">جمعه</div>
-            <div class="value">7</div>
-        </div>
-        
-
-    </div>
-
-    </div>
     <h1 id="Present" dir="rtl">وضعیت‌حضور</h1>
     <div class="divPresent">
       <table>

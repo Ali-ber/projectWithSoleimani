@@ -23,7 +23,7 @@ function toggleMenu() {
         backMenuHeader.style.transition = "all 0.75s";
         backMenuHeader.style.display = "none";
     }else{
-        menuHeader.style.width = "140px";
+        menuHeader.style.width = "165px";
         backMenuHeader.style.backgroundColor = "#f5ab356c";
         backMenuHeader.style.transition = "all 0.75s";
         backMenuHeader.style.display = "block";
