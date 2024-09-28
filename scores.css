@@ -1,0 +1,586 @@
+@font-face {
+    font-family: "peydaMedium";
+    src: url(font/Peyda-Medium.ttf);
+}
+@font-face {
+    font-family: "peydaBold";
+    src: url(font/Peyda-Bold.ttf);
+}
+body {
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-right: 60px;
+    align-items: center;
+    text-align: center;
+}
+::-webkit-scrollbar {
+    background-color: none;
+    width: 10px;
+    margin: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #4a4949; 
+    border-radius: 10px;
+  }
+.scrollProgress{
+    background-color: #f5ab35;
+    width: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: scrollProgress linear;
+    animation-timeline: scroll();
+    z-index: 100;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+@keyframes scrollProgress{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 100%;
+    }
+}
+header {
+    position: fixed;
+    display: flex;
+    height: 40px;
+    background-color: #0000003c;
+    border-radius: 15px;
+    padding: 10px;
+    justify-content: space-around;
+    top: 20px;
+    right: 10px;
+    left: 10px;
+    z-index: 1000000000000000000000000002;
+}
+.logo {
+    position: absolute;
+    left: -10px;
+    top: -15px;
+    cursor: pointer;
+}
+
+.boxToggle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #0000003c;
+    border-radius: 10px;
+    position: absolute;
+    right: 10px;
+    overflow: hidden;
+}
+.boxToggle button {
+    background-color: rgba(240, 255, 255, 0);
+    border: 0;
+}
+.iconToggle {
+    scale: 50%;
+}
+.content {
+    background-color: #0000003c;
+    cursor: pointer;
+    font-family: "peydaMedium";
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 110px;
+    position: absolute;
+    right: 110px;
+    z-index: 1;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+.content button{
+    background: none;
+    cursor: pointer;
+    font-family: "peydaMedium";
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 90px;
+    position: absolute;
+    right: 0;
+    display: none;
+}
+.content button a{
+    text-decoration: none;
+    color: #000000;
+}
+.content .downing lord-icon{
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+.content .downing img{
+    height: 15px;
+    position: absolute;
+    left: 30px;
+    top: 13px;
+    filter: drop-shadow(1px 1px 4px rgb(0, 0, 0));
+    transition: all .5s ease;
+}
+.inContent{
+    position: relative;
+    top: 42px;
+}
+.inContent ul{
+	position: absolute;
+	top: 0;
+	right: -4px;
+	width: 100%;
+}
+.inContent ul li {
+	position: relative;
+	list-style: none;
+    right: 0;
+	width: 100%;
+}
+.inContent ul li a{
+	position: relative;
+	display: block;
+	width: 100%;
+	display: flex;
+    right: -27px;
+	text-decoration: none;
+	color: #000000;
+ }
+.inContent ul li .aboutContent{
+	position: relative;
+	top: 6px;
+    margin-right: 2px;
+ }
+.themeToggle {
+    background-color: #0000003c;
+    border-radius: 10px;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 60px;
+}
+.toggle {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    line-height: 1;
+    scale: 80%;
+    position: absolute;
+    top: 4.5px;
+    left: 4.25px;
+}
+
+.input {
+    display: none;
+}
+
+.icon {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    transition: transform 500ms;
+}
+
+.icon--moon {
+    transition-delay: 200ms;
+}
+
+.icon--sun {
+    transform: scale(0);
+}
+
+#switch:checked + .icon--moon {
+    transform: rotate(360deg) scale(0);
+}
+
+#switch:checked ~ .icon--sun {
+    transition-delay: 200ms;
+    transform: scale(1) rotate(360deg);
+}
+.menuHeader {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60px;
+    background-color: #0000003c;
+    border-radius: 15px;
+    right: 10px;
+    bottom: 10px;
+    top: 90px;
+    overflow: hidden;
+    transition: all .5s;
+    z-index: 100000000000000000000000001;
+}
+.menuHeader .divIcon {
+    position: relative;
+    right: 0;
+    width: 100%;
+    height: 30px;
+    display: block;
+}
+.divIcon:last-of-type{
+    margin-bottom: 25px;
+}
+.menuHeader .divIcon .aboutIcons {
+    position: absolute;
+    right: 60px;
+    top: 16px;
+    font-size: 18px;
+    font-family: "peydaMedium";
+    text-align: end;
+    margin: 0;
+    cursor: pointer;
+}
+.menuHeader .divIcon .icons {
+    position: absolute;
+    right: 10px;
+    margin: 10px 0 10px 10px;
+    cursor: pointer;
+}
+
+.backMenuHeader {
+    display: none;
+    width: 10000px;
+    height: 10000px;
+    position: fixed;
+    top: 0;
+    right: -100px;
+    background-color: none;
+    backdrop-filter: blur(3.6px);
+    -webkit-backdrop-filter: blur(3.6px);
+    transition: all 0.5s;
+    z-index: 10000000000000000000000000;
+}
+
+#checkbox2 {
+    display: none;
+    }
+    .toggle2 {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition-duration: .5s;
+    }
+    .bars {
+    width: 100%;
+    height: 6px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 6px;
+    }
+    
+    #bar5 {
+    transition-duration: .8s;
+    }
+    
+    #bar4,#bar6 {
+    width: 80%;
+    }
+    
+    #checkbox2:checked + .toggle2 .bars {
+    position: absolute;
+    transition-duration: .5s;
+    }
+    
+    #checkbox2:checked + .toggle2 #bar5 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+    }
+    
+    #checkbox2:checked + .toggle2 #bar4 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+    }
+    
+    #checkbox2:checked + .toggle2 #bar6 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+    }
+    
+    #checkbox2:checked + .toggle2 {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+    }
+.profile{
+    position: relative;
+    top: 110px;
+    width: 90%;
+    height: 90px;
+    margin: 0 auto;
+    background-color: #f5ab36;
+    box-shadow: 0px 0px 33px 1px rgba(245, 171, 54, .3);
+    border-radius: 50px 50px 50px 50px;
+    font-family: "peydaMedium";
+}
+.score{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffffff;
+    width: 110px;
+    height: 30%;
+    padding-top: 4px;
+    border-radius: 30px 5px 5px 5px;
+    color: #f5ab35;
+    font-size: 14px;
+}
+.perScore{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #ffffff;
+    width: 110px;
+    height: 30%;
+    padding-top: 4px;
+    border-radius: 5px 5px 5px  30px;
+    color: blueviolet;
+    font-size: 14px;
+}
+.profileImg{
+    top: 10px;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+}
+.profileImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.profileName{
+    position: absolute;
+    top: 3px;
+    right: 90px;
+}
+.profileS{
+    position: absolute;
+    top: 45px;
+    right: 92px;
+    font-size: 10px;
+    cursor: pointer;
+}
+#chalange{
+    position: relative;
+    top: 160px;
+    font-family: "peydaBold";
+}
+.chalanges{
+    position: relative;
+    top: 170px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.chalange{
+    position: relative;
+    padding: 15px;
+    background-color: #e2e2e2;
+    width: 80px;
+    border-radius: 20px;
+    font-family: "peydaMedium";
+}
+.chalange img{
+    border-radius: 10px;
+}
+.chalange button{
+    border-radius: 10px;
+    border: none;
+    background-color: #f5ab35;
+    color: #ffffff;
+    padding: 8px;
+    font-family: "peydaMedium";
+    cursor: pointer;
+    width: 80px;
+}
+
+
+.rankAdmin{
+    position: relative;
+    display: flex;
+    background-color: #f0f0f0;
+    width: 80%;
+    height: 170px;
+    border-radius: 15px;
+    font-family: "peydaMedium";
+  }
+  @media screen and (max-width: 980px) {
+  .rankAdmin {
+    height: 200px;
+  }
+  .rankAdmin {
+      padding-left: 8px;
+  }
+  }
+  .profileAdmin{
+    position: relative;
+    top: 20px;
+    background-color: #00000014;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  .profileAdmin img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+  }
+  .rankNumber{
+    position: absolute;
+    bottom: -85px;
+    left: 20px;
+    font-size: 50px;
+    opacity: 50%;
+  }
+  .scoreAdmin{
+    width: 90%;
+    position: absolute;
+    top: 90px;
+    right: 9px;
+  }
+  .nameAdmin{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 90%;
+      position: absolute;
+      top: 70px;
+      right: 9px;
+  }
+.rankingAllUsers {
+    display: grid;
+    position: relative;
+    grid-template-columns: auto auto auto;
+}
+.OneTwoThree {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column: 1 / 4;
+}
+.swiperSlide:first-of-type {
+    margin-right: 10px;
+}
+.swiperSlide:last-of-type {
+    margin-left: 10px;
+}
+.swiperSlide {
+    text-align: center;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#beforeRankingAllUsers{
+    font-family: "peydaBold";
+    position: relative;
+    margin-top: 250px;
+}
+.rankUser4:nth-child(1){
+    font-family: "peydaMedium";
+    width: calc(100% - 40px);
+    position: absolute;
+    margin-top: 20px;
+    height: 50px;
+    left: 0;
+    margin-left: 10px;
+}
+.rankUser4:nth-child(2){
+    font-family: "peydaMedium";
+    width: calc(100% - 40px);
+    position: absolute;
+    margin-top: 82px;
+    height: 50px;
+    left: 0;
+    margin-left: 10px;
+}
+.rankUser4:nth-child(3){
+    font-family: "peydaMedium";
+    width: calc(100% - 40px);
+    position: absolute;
+    margin-top: 144px;
+    height: 50px;
+    left: 0;
+    margin-left: 10px;
+}
+.rankUser4:nth-child(4){
+    font-family: "peydaMedium";
+    width: calc(100% - 40px);
+    position: absolute;
+    margin-top: 206px;
+    height: 50px;
+    left: 0;
+    margin-left: 10px;
+}
+.profileUser{
+    position: absolute;
+    top: 20px;
+    background-color: #646464;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    right: 70px;
+    
+}
+.profileUser img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+}
+.rankUser{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.nameUser{
+    position: absolute;
+    top: 30px;
+    right: 125px;
+}
+hr{
+    background-color: #f0f0f0;
+    height: 1px;
+    border: none;
+    border-radius: 6px;
+}
+.rankPerson{
+    color:#f5ab35;
+}
+.rankPerson .profileUser{
+    border: 3px solid #f5ab35;
+}
