@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="mangeContent.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="نمونه ای از توضیحات متا که برای نمایش به کاربران در serp گوگل نمایش داده می شود.">
+  <link rel="icon" type="image/png" href="img/shariatifard.png"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<title>شهیدان شریعتی‌فرد</title>
+</head>
+<div class="scrollProgress"></div>
+<div class="backMenuHeader" onclick="toggleMenu()"></div>
+<div class="menuHeader">
+  <div class="divIcon">
+    <lord-icon
+    src="https://cdn.lordicon.com/lecprnjb.json"
+    trigger="hover"
+    colors="primary:#000000"
+    style="width:35px;height:35px"
+    class="icons">
+    </lord-icon>
+    <p class="aboutIcons">تنظیمات</p>
+    </div>
+</div>  
+<header class="header">
+    <div class="logo">
+      <img src="img/shariatifard.png" alt="لوگوی شهیدان شریعتی فرد" height="90px" width="85px">
+    </div>
+    <div class="boxToggle">
+        <button onclick="toggleMenu()"><div class="iconToggle">  
+        <input id="checkbox2" type="checkbox">
+<label class="toggle1 toggle2" for="checkbox2">
+  <div id="bar4" class="bars"></div>
+  <div id="bar5" class="bars"></div>
+  <div id="bar6" class="bars"></div>
+</label>
+        </div></button>
+    </div>
+    
+    <div class="content" onmouseover="contentHover()" onmouseout="normal()">
+        <div class="downing">
+          <lord-icon src="https://cdn.lordicon.com/lyrrgrsl.json" trigger="hover" colors="primary:#000000" style="width:30px;height:30px" class="icons"></lord-icon>
+          <img id="down" onclick="downUp()" src="img/down.png" alt="اطلاعات بیشتر">
+        </div>
+        <a href="#"><button>ورود/ثبت‌نام</button></a>
+        <div class="inContent" dir="RTL">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="iconContent"></span>
+              <span class="aboutContent">داشبورد</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="themeToggle">
+      <label class="toggle" for="switch">
+        <input id="switch" class="input" type="checkbox" onclick="themeToggleBody()">
+        <div class="icon icon--moon">
+          <svg height="32" width="32" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+        
+        <div class="icon icon--sun">
+          <svg height="32" width="32" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"></path>
+          </svg>
+        </div>
+      </label>
+    </div>
+  </header>
+  
+  <body class="body">
+    
+  <div class="allContent">
+    <div class="titleContent">
+      <div class="list actived">
+        <button class="newContent">در انتظار تایید</button>
+      </div>
+      <div class="list ">
+        <button class="likesContent">تایید شده</button>
+      </div>
+      <div class="list">
+        <button class="oldContent">تایید نشده</button>
+      </div>
+    </div>
+    <div class="changingContent">
+
+      <div class="audioContent">
+        <audio id="track" src="img/1.mp3"></audio>
+        
+        <div id="player-container">
+        
+          <!-- Progress -->
+          <div id="timeline">
+            <div id="scrub"></div>
+            <div id="playhead"></div>
+          </div>
+        
+          <!-- Play button -->
+          <div id="play-pause" class="play" data-audio="https://cldup.com/qR72ozoaiQ.mp3">Play
+          </div>
+
+          <!-- change Titlt & subtitle -->
+          <div class="item-inner">
+            <!-- subtitle of audio -->
+            <div class="item-title">نزیصعاعخص</div>
+            <!-- title of audio -->
+            <div class="item-subtitle">نعضثزابصعخقبا</div>
+        
+            <!-- Time -->
+            <div id="time-bar">
+              <div id="time-holder">
+                <div id="is-left">
+                  <span id="current-time">
+                    00:00
+                  </span>
+                </div>
+                <div id="is-right">
+                  <span id="duration-time">
+                    <span class="duration-minutes" data-duration-minutes="true">0</span>:<span class="duration-minutes" data-duration-seconds="true">00</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="descriptionTxt" data-info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure optio quo id. Assumenda praesentium provident excepturi, repellendus illum modi, delectus rem eveniet magnam aspernatur numquam dignissimos minima soluta nisi deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure optio quo id. Assumenda praesentium provident excepturi, repellendus illum modi, delectus rem eveniet magnam aspernatur numquam dignissimos minima soluta nisi deserunt. vLorem ipsum dolor sit amet consectetur adipisicing elit. Iure optio quo id. Assumenda praesentium provident excepturi, repellendus illum modi, delectus rem eveniet magnam aspernatur numquam dignissimos minima soluta nisi deserunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure optio quo id. Assumenda praesentium provident excepturi, repellendus illum modi, delectus rem eveniet magnam aspernatur numquam dignissimos minima soluta nisi deserunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure optio quo id. Assumenda praesentium provident excepturi, repellendus illum modi, delectus rem eveniet magnam aspernatur numquam dignissimos minima soluta nisi deserunt."><p dir="rtl" class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure optio quo id. Assumenda praesentium provident excepturi, repellendus illum modi, delectus rem eveniet magnam aspernatur numquam dignissimos minima soluta nisi deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure optio quo id. Assumenda praesentium provident excepturi, repellendus illum modi, delectus rem eveniet magnam aspernatur numquam dignissimos minima soluta nisi deserunt. vLorem ipsum dolor sit amet consectetur adipisicing elit. Iure optio quo id. Assumenda praesentium provident excepturi, repellendus illum modi, delectus rem eveniet magnam aspernatur numquam dignissimos minima soluta nisi deserunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure optio quo id. Assumenda praesentium provident excepturi, repellendus illum modi, delectus rem eveniet magnam aspernatur numquam dignissimos minima soluta nisi deserunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure optio quo id. Assumenda praesentium provident excepturi, repellendus illum modi, delectus rem eveniet magnam aspernatur numquam dignissimos minima soluta nisi deserunt.<span class="descriptionThis"></span></p><button class="moreDescription">بیشتر</button></span>
+        <div class="downOf">
+          <div class="downProfileAdmin">
+            <img src="img/1.jfif" alt="downProfileAdmin" height="40px" width="40px">
+            <p dir="rtl" class="downNameAdmin">علی محمدی برنجگانی</p>
+            <p class="downAboutAdmin">...اطلاعات‌بیشتر</p>
+        </div>
+          <div class="downProfileAdmin">
+            <img src="img/3.jfif" alt="downProfileAdmin" height="40px" width="40px">
+            <p dir="rtl" class="downNameAdmin">علی محمدی برنجگانی</p>
+            <p class="downAboutAdmin">...اطلاعات‌بیشتر</p>
+        </div>
+          
+          <div class="divDownIcons">
+            <a href="img/1.mp3" download>
+              <lord-icon class="downIcons" src="https://cdn.lordicon.com/smwmetfi.json" trigger="hover" colors="primary:#000000" style="width:30px;height:30px"></lord-icon>
+            </a>
+            <lord-icon class="normalLike downIcons" src="https://cdn.lordicon.com/xyboiuok.json" colors="primary:#000000" trigger="click" state="morph-heart" style="width:30px;height:30px"></lord-icon>
+            <lord-icon class="premiumlike downIcons" src="https://cdn.lordicon.com/lxizbtuq.json" trigger="click" state="morph-coins" style="width:35px;height:35px">
+            </div>
+        </div>
+        <div class="downOfEdit">
+          <button>ویرایش</button>
+          <button>حذف</button>
+        </div>
+      </div>
+
+      <div class="videoContent">
+        <video id="horizontal" controls>
+          <source src="img/2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <span class="descriptionTxt" data-info="اطلاعات کارت 1"><p dir="rtl" class="description"><span class="descriptionThis">اطلاعات کارت 1</span></p><button class="moreDescription">بیشتر</button></span>
+      <div class="downOf">
+        <div class="downProfileAdmin">
+          <img src="img/1.jfif" alt="downProfileAdmin" height="40px" width="40px">
+          <p dir="rtl" class="downNameAdmin">علی محمدی برنجگانی</p>
+          <p class="downAboutAdmin">...اطلاعات‌بیشتر</p>
+      </div>
+        <div class="downProfileAdmin">
+          <img src="img/1.jfif" alt="downProfileAdmin" height="40px" width="40px">
+          <p dir="rtl" class="downNameAdmin">علی محمدی برنجگانی</p>
+          <p class="downAboutAdmin">...اطلاعات‌بیشتر</p>
+      </div>
+        
+        <div class="divDownIcons">
+          <a href="img/2.mp4" download>
+            <lord-icon class="downIcons" src="https://cdn.lordicon.com/smwmetfi.json" trigger="hover" colors="primary:#000000" style="width:30px;height:30px"></lord-icon>
+          </a>
+          <lord-icon class="normalLike downIcons" src="https://cdn.lordicon.com/xyboiuok.json" colors="primary:#000000" trigger="click" state="morph-heart" style="width:30px;height:30px"></lord-icon>
+          <lord-icon class="normalLike downIcons" src="https://cdn.lordicon.com/lxizbtuq.json" trigger="click" state="morph-coins" style="width:35px;height:35px">
+          </div>
+      </div>
+      <div class="downOfEdit">
+        <button>ویرایش</button>
+        <button>حذف</button>
+      </div>
+      </div>
+
+      <div class="txtContent">
+        <span><p dir="rtl" class="descriptionTxt">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p></span>
+      <div class="downOf">
+        <div class="downProfileAdmin">
+          <img src="img/1.jfif" alt="downProfileAdmin" height="40px" width="40px">
+          <p dir="rtl" class="downNameAdmin">علی محمدی برنجگانی</p>
+          <p class="downAboutAdmin">...اطلاعات‌بیشتر</p>
+      </div>
+        <div class="divDownIcons">
+          <lord-icon class="normalLike downIcons" src="https://cdn.lordicon.com/xyboiuok.json" colors="primary:#000000" trigger="click" state="morph-heart" style="width:30px;height:30px"></lord-icon>
+          <lord-icon class="premiumlike downIcons" src="https://cdn.lordicon.com/lxizbtuq.json" trigger="click" state="morph-coins" style="width:35px;height:35px">
+      </lord-icon>
+        </div>
+      </div>
+      <div class="downOfEdit">
+        <button>ویرایش</button>
+        <button>حذف</button>
+      </div>
+      </div>    
+      
+
+      <div class="imgContent">
+        <img id="horizontal" src="img/3.jfif" alt="horizontal">
+        <span class="descriptionTxt" data-info="lelt4"><p dir="rtl" class="description">lelt4<span class="descriptionThis"></span></p><button class="moreDescription">بیشتر</button></span>
+      <div class="downOf">
+        <div class="downProfileAdmin">
+          <img src="img/1.jfif" alt="downProfileAdmin" height="40px" width="40px">
+          <p dir="rtl" class="downNameAdmin">علی محمدی برنجگانی</p>
+          <p class="downAboutAdmin">...اطلاعات‌بیشتر</p>
+        </div>
+        <div class="divDownIcons">
+          <a href="img/3.jfif" download>
+            <lord-icon class="downIcons" src="https://cdn.lordicon.com/smwmetfi.json" trigger="hover" colors="primary:#000000" style="width:30px;height:30px"></lord-icon>
+          </a>
+          <lord-icon class="normalLike downIcons" src="https://cdn.lordicon.com/xyboiuok.json" colors="primary:#000000" trigger="click" state="morph-heart" style="width:30px;height:30px"></lord-icon>
+          <lord-icon class="premiumLike downIcons" src="https://cdn.lordicon.com/lxizbtuq.json" trigger="click" state="morph-coins" style="width:35px;height:35px">
+          </div>
+      </div>
+      <div class="downOfEdit">
+        <button>ویرایش</button>
+        <button>حذف</button>
+      </div>
+      </div>
+ </div>
+ 
+  <footer class="footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.3/popup.min.js"></script>
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  
+  <script type="text/javascript" src="script.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+      var swiper = new Swiper('.swiper', {
+    slidesPerView: 3,
+    direction: getDirection(),
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      
+    },
+  });
+
+  function getDirection() {
+    var windowWidth = window.innerWidth;
+    var direction = window.innerWidth <= 160 ? 'vertical' : 'horizontal';
+
+    return direction;
+  }
+  </script>
+</body>
+</html>
