@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="uploadFile.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="نمونه ای از توضیحات متا که برای نمایش به کاربران در serp گوگل نمایش داده می شود.">
+  <link rel="icon" type="image/png" href="img/shariatifard.png"/>
+  <script type="text/javascript" src="jquery.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<title>شهیدان شریعتی‌فرد</title>
+</head>
+<div class="scrollProgress"></div>
+<div class="backMenuHeader" onclick="toggleMenu()"></div>
+<div class="menuHeader">
+  <div class="divIcon">
+    <lord-icon
+    src="https://cdn.lordicon.com/lecprnjb.json"
+    trigger="hover"
+    colors="primary:#000000"
+    style="width:35px;height:35px"
+    class="icons">
+    </lord-icon>
+    <p class="aboutIcons">تنظیمات</p>
+    </div>
+</div>  
+<header class="header">
+    <div class="logo">
+      <img src="img/shariatifard.png" alt="لوگوی شهیدان شریعتی فرد" height="90px" width="85px">
+    </div>
+    <div class="boxToggle">
+        <button onclick="toggleMenu()"><div class="iconToggle">  
+        <input id="checkbox2" type="checkbox">
+<label class="toggle1 toggle2" for="checkbox2">
+  <div id="bar4" class="bars"></div>
+  <div id="bar5" class="bars"></div>
+  <div id="bar6" class="bars"></div>
+</label>
+        </div></button>
+    </div>
+    
+    <div class="content" onmouseover="contentHover()" onmouseout="normal()">
+        <div class="downing">
+          <lord-icon src="https://cdn.lordicon.com/lyrrgrsl.json" trigger="hover" colors="primary:#000000" style="width:30px;height:30px" class="icons"></lord-icon>
+          <img id="down" onclick="downUp()" src="img/down.png" alt="اطلاعات بیشتر">
+        </div>
+        <a href="#"><button>ورود/ثبت‌نام</button></a>
+        <div class="inContent" dir="RTL">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="iconContent"></span>
+              <span class="aboutContent">داشبورد</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="themeToggle">
+      <label class="toggle" for="switch">
+        <input id="switch" class="input" type="checkbox" onclick="themeToggleBody()">
+        <div class="icon icon--moon">
+          <svg height="32" width="32" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+        
+        <div class="icon icon--sun">
+          <svg height="32" width="32" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"></path>
+          </svg>
+        </div>
+      </label>
+    </div>
+  </header>
+  
+  <body class="body">
+    <div class="uploadFiles">
+      
+      <select id="subSorting" dir="rtl">
+        <option>---</option>
+        <option id="c1">---</option>
+		    <option id="c2">---</option>
+		    <option id="c3">---</option>
+      </select>
+      <select id="baceSorting" dir="rtl">
+        <option value="تصاویر">تصاویر</option>
+        <option value="ویدئوها">ویدئوها</option>
+        <option value="متن">متن</option>
+        <option value="به‌وقت‌رمان">به‌وقت‌رمان</option>
+        <option value="زندگینامه">زندگینامه</option>
+        <option value="دستنوشته">دستنوشته</option>
+        <option value="به‌وقت‌روضه">به‌وقت‌روضه</option>
+        <option value="خاطرات">خاطرات</option>
+      </select>
+      <h5 dir="rtl">بارگذاری فایل:</h5>
+      <div id="my-form">
+        <lord-icon
+    src="https://cdn.lordicon.com/fowixcuo.json"
+    trigger="hover"
+    colors="primary:#848484"
+    style="width:50px;height:50px">
+</lord-icon>
+        <form class="my-form">
+          <input type="file" id="fileElem" multiple accept="video/*" onchange="handleFiles(this.files)">
+          <label class="button" for="fileElem">انتخاب‌فایل</label>
+        </form>
+        <progress id="progress-bar" max=100 value=0></progress>
+        <div id="gallery"></div>
+      </div>
+      <div class="note">
+      <p dir="rtl">با کشیدن فایل ها و انداختن درون جعبه بارگذاری و یا انتخاب فایل می‌توانید فایل های خود را بارگذاری کنید.</p>
+      <p dir="rtl">باگذاری فایل‌هایی با حجم بیش از <span>25 مگابایت</span> مجاز نمی‌باشد!</p>
+    </div>
+    <h4 dir="rtl">توضیحات:</h4>
+    <textarea class="description" dir="rtl"></textarea>
+    <h4 dir="rtl">تهیه به همراه دیگران:</h4>
+    <div class="searchEmail" dir="rtl">
+      <input type="email" id="searchEmail" placeholder="ایمیل">
+      <input type="submit" id="searchButton" value="افزودن">
+      
+      <div class="resultSearch">
+        <div class="profile">
+          <img src="img/2.jfif" alt="profile">
+          <p dir="ltr" class="Email">alimohammadiber@gmail.com</p>
+        </div>
+        
+
+      </div>
+
+    </div>
+
+    <h4>ارسال در</h4>
+    <div class="checkbox-wrapper-16">
+      <label class="checkbox-wrapper">
+        <input class="checkbox-input" type="checkbox" checked>
+        <span class="checkbox-tile">
+          <span class="checkbox-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 16 16" viewBox="0 0 16 16"><path d="m8 2c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm3.9 3.8h-1.5c-.1-.7-.2-1.3-.4-1.8.7.3 1.4 1 1.9 1.8zm.6 2.2c0 .3 0 .5-.1.8h-1.9c0-.2 0-.5 0-.8s0-.5 0-.8h1.9c.1.3.1.5.1.8zm-4.5 4.5c-.2-.2-.6-.9-.8-2.2h1.6c-.2 1.2-.6 2-.8 2.2zm-1-3.7c0-.3 0-.5 0-.8s0-.5 0-.8h2v.8s0 .5 0 .8zm-3.5-.8c0-.3 0-.5.1-.8h1.9v.8s0 .5 0 .8h-1.9c-.1-.3-.1-.5-.1-.8zm4.5-4.5c.2.1.6.9.8 2.2h-1.6c.2-1.3.6-2.1.8-2.2zm-1.9.4c-.2.6-.3 1.2-.4 1.9h-1.6c.5-.8 1.2-1.5 2-1.9zm-2 6.3h1.5c.1.7.2 1.3.4 1.8-.7-.3-1.4-1-1.9-1.8zm5.8 1.9c.2-.5.3-1.1.4-1.8h1.5c-.4.7-1.1 1.4-1.9 1.8z"/></svg>
+          </span>
+          <span class="checkbox-label">وب</span>
+        </span>
+      </label>
+      <label class="checkbox-wrapper">
+        <input class="checkbox-input" type="checkbox">
+        <span class="checkbox-tile">
+          <span class="checkbox-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m5.968 23.942a6.624 6.624 0 0 1 -2.332-.83c-1.62-.929-2.829-2.593-3.217-4.426-.151-.717-.17-1.623-.15-7.207.019-6.009.005-5.699.291-6.689.142-.493.537-1.34.823-1.767 1.055-1.57 2.607-2.578 4.53-2.943.384-.073.94-.08 6.056-.08 6.251 0 6.045-.009 7.066.314a6.807 6.807 0 0 1 4.314 4.184c.33.937.346 1.087.369 3.555l.02 2.23-.391.268c-.558.381-1.29 1.06-2.316 2.15-1.182 1.256-2.376 2.42-2.982 2.907-1.309 1.051-2.508 1.651-3.726 1.864-.634.11-1.682.067-2.302-.095-.553-.144-.517-.168-.726.464a6.355 6.355 0 0 0 -.318 1.546l-.031.407-.146-.03c-1.215-.241-2.419-1.285-2.884-2.5a3.583 3.583 0 0 1 -.26-1.219l-.016-.34-.309-.284c-.644-.59-1.063-1.312-1.195-2.061-.212-1.193.34-2.542 1.538-3.756 1.264-1.283 3.127-2.29 4.953-2.68.658-.14 1.818-.177 2.403-.075 1.138.198 2.067.773 2.645 1.639.182.271.195.31.177.555a.812.812 0 0 1 -.183.493c-.465.651-1.848 1.348-3.336 1.68-2.625.585-4.294-.142-4.033-1.759.026-.163.04-.304.031-.313-.032-.032-.293.104-.575.3-.479.334-.903.984-1.05 1.607-.036.156-.05.406-.034.65.02.331.053.454.192.736.092.186.275.45.408.589l.24.251-.096.122a4.845 4.845 0 0 0 -.677 1.217 3.635 3.635 0 0 0 -.105 1.815c.103.461.421 1.095.739 1.468.242.285.797.764.886.764.024 0 .044-.048.044-.106.001-.23.184-.973.326-1.327.423-1.058 1.351-1.96 2.82-2.74.245-.13.952-.47 1.572-.757 1.36-.63 2.103-1.015 2.511-1.305 1.176-.833 1.903-2.065 2.14-3.625.086-.57.086-1.634 0-2.207-.368-2.438-2.195-4.096-4.818-4.37-2.925-.307-6.648 1.953-8.942 5.427-1.116 1.69-1.87 3.565-2.187 5.443-.123.728-.169 2.08-.093 2.75.193 1.704.822 3.078 1.903 4.156a6.531 6.531 0 0 0 1.87 1.313c2.368 1.13 4.99 1.155 7.295.071.996-.469 1.974-1.196 3.023-2.25 1.02-1.025 1.71-1.88 3.592-4.458 1.04-1.423 1.864-2.368 2.272-2.605l.15-.086-.019 3.091c-.018 2.993-.022 3.107-.123 3.561-.6 2.678-2.54 4.636-5.195 5.242l-.468.107-5.775.01c-4.734.008-5.85-.002-6.19-.056z"/></svg>
+          </span>
+          <span class="checkbox-label">ایتا</span>
+        </span>
+      </label>
+    </div>
+    <input class="submitPost" type="submit" value="انتشار">
+  </div>
+  <footer class="footer"></footer>
+
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  
+  <script type="text/javascript" src="uploadFile.js"></script>
+
+</body>
+</html>

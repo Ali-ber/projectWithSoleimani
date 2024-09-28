@@ -1,0 +1,606 @@
+@font-face {
+    font-family: "peydaMedium";
+    src: url(font/Peyda-Medium.ttf);
+}
+@font-face {
+    font-family: "peydaBold";
+    src: url(font/Peyda-Bold.ttf);
+}
+body {
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-right: 60px;
+    align-items: center;
+    text-align: center;
+}
+::-webkit-scrollbar {
+    background-color: none;
+    width: 5px;
+    margin: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #cccccc; 
+    border-radius: 10px;
+
+  }
+.scrollProgress{
+    background-color: #f5ab35;
+    width: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: scrollProgress linear;
+    animation-timeline: scroll();
+    z-index: 100;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+@keyframes scrollProgress{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 100%;
+    }
+}
+header {
+    position: fixed;
+    display: flex;
+    height: 40px;
+    background-color: #0000003c;
+    border-radius: 15px;
+    padding: 10px;
+    justify-content: space-around;
+    top: 20px;
+    right: 10px;
+    left: 10px;
+    z-index: 1000000000000000000000000002;
+}
+.logo {
+    position: absolute;
+    left: -10px;
+    top: -15px;
+    cursor: pointer;
+}
+
+.boxToggle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #0000003c;
+    border-radius: 10px;
+    position: absolute;
+    right: 10px;
+    overflow: hidden;
+}
+.boxToggle button {
+    background-color: rgba(240, 255, 255, 0);
+    border: 0;
+}
+.iconToggle {
+    scale: 50%;
+}
+.content {
+    background-color: #0000003c;
+    cursor: pointer;
+    font-family: "peydaMedium";
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 110px;
+    position: absolute;
+    right: 110px;
+    z-index: 1;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+.content button{
+    background: none;
+    cursor: pointer;
+    font-family: "peydaMedium";
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 90px;
+    position: absolute;
+    right: 0;
+    display: none;
+}
+.content button a{
+    text-decoration: none;
+    color: #000000;
+}
+.content .downing lord-icon{
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+.content .downing img{
+    height: 15px;
+    position: absolute;
+    left: 30px;
+    top: 13px;
+    filter: drop-shadow(1px 1px 4px rgb(0, 0, 0));
+    transition: all .5s ease;
+}
+.inContent{
+    position: relative;
+    top: 42px;
+}
+.inContent ul{
+	position: absolute;
+	top: 0;
+	right: -4px;
+	width: 100%;
+}
+.inContent ul li {
+	position: relative;
+	list-style: none;
+    right: 0;
+	width: 100%;
+}
+.inContent ul li a{
+	position: relative;
+	display: block;
+	width: 100%;
+	display: flex;
+    right: -27px;
+	text-decoration: none;
+	color: #000000;
+ }
+.inContent ul li .aboutContent{
+	position: relative;
+	top: 6px;
+    margin-right: 2px;
+ }
+.themeToggle {
+    background-color: #0000003c;
+    border-radius: 10px;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 60px;
+}
+.toggle {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    line-height: 1;
+    scale: 80%;
+    position: absolute;
+    top: 4.5px;
+    left: 4.25px;
+}
+
+.input {
+    display: none;
+}
+
+.icon {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    transition: transform 500ms;
+}
+
+.icon--moon {
+    transition-delay: 200ms;
+}
+
+.icon--sun {
+    transform: scale(0);
+}
+
+#switch:checked + .icon--moon {
+    transform: rotate(360deg) scale(0);
+}
+
+#switch:checked ~ .icon--sun {
+    transition-delay: 200ms;
+    transform: scale(1) rotate(360deg);
+}
+.menuHeader {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60px;
+    background-color: #0000003c;
+    border-radius: 15px;
+    right: 10px;
+    bottom: 10px;
+    top: 90px;
+    overflow: hidden;
+    transition: all .5s;
+    z-index: 100000000000000000000000001;
+}
+.menuHeader .divIcon {
+    position: relative;
+    right: 0;
+    width: 100%;
+    height: 30px;
+    display: block;
+}
+.divIcon:last-of-type{
+    margin-bottom: 25px;
+}
+.menuHeader .divIcon .aboutIcons {
+    position: absolute;
+    right: 60px;
+    top: 16px;
+    font-size: 18px;
+    font-family: "peydaMedium";
+    text-align: end;
+    margin: 0;
+    cursor: pointer;
+}
+.menuHeader .divIcon .icons {
+    position: absolute;
+    right: 10px;
+    margin: 10px 0 10px 10px;
+    cursor: pointer;
+}
+.helpMenu {
+    text-align: end;
+    color: #0000003c;
+}
+.backMenuHeader {
+    display: none;
+    width: 10000px;
+    height: 10000px;
+    position: fixed;
+    top: 0;
+    right: -100px;
+    background-color: none;
+    backdrop-filter: blur(3.6px);
+    -webkit-backdrop-filter: blur(3.6px);
+    transition: all 0.5s;
+    z-index: 10000000000000000000000000;
+}
+.help {
+    cursor: pointer;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    background-color: #0000003c;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #0000003c;
+    left: 0;
+    top: 770%;
+}
+#checkbox2 {
+    display: none;
+    }
+    .toggle2 {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition-duration: .5s;
+    }
+    .bars {
+    width: 100%;
+    height: 6px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 6px;
+    }
+    
+    #bar5 {
+    transition-duration: .8s;
+    }
+    
+    #bar4,#bar6 {
+    width: 80%;
+    }
+    
+    #checkbox2:checked + .toggle2 .bars {
+    position: absolute;
+    transition-duration: .5s;
+    }
+    
+    #checkbox2:checked + .toggle2 #bar5 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+    }
+    
+    #checkbox2:checked + .toggle2 #bar4 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+    }
+    
+    #checkbox2:checked + .toggle2 #bar6 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+    }
+    
+    #checkbox2:checked + .toggle2 {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+    }
+.uploadFiles{
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    height: max-content;
+    padding: 15px 15px 45px 15px;
+    background-color: #dedede;
+    top: 100px;
+    text-align: center;
+    border-radius: 20px;
+    font-family: "peydaMedium";
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.uploadFiles select{
+    background-color: #f5ab35;
+    border: 0;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: "peydaMedium";
+}
+progress{
+    width: 90%;
+}
+.note p span{
+    color: #f5ab35;
+}
+a {
+    color: rgb(6, 6, 6);
+  }
+  .note {
+    width: 90%;
+    margin: 0 auto;
+    color: #333;
+    text-align: justify;
+  }
+  #my-form {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: calc(90% + 20px);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 3px;
+    
+  }
+  #my-form.highlight {
+    border: 2px solid #f5ab35;
+  }
+  p {
+    margin-top: 0;
+  }
+  .my-form {
+    margin-bottom: 20px;
+  }
+  #gallery {
+    margin-top: 10px;
+  }
+  #gallery img {
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px;
+    background: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .button:hover {
+    background: #ddd;
+  }
+  #fileElem {
+    display: none;
+  }
+.description{
+    border: none;
+    width: calc(90% + 10px);
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+}
+.checkbox-wrapper-16 {
+    display: flex;
+    flex-wrap:wrap;
+    font-family: "peydaMedium";
+    justify-content: center;
+}
+.checkbox-wrapper-16 label{
+    margin: 10px;
+    display: inline;
+}
+  .checkbox-wrapper-16 *,
+  .checkbox-wrapper-16 *:after,
+  .checkbox-wrapper-16 *:before {
+  box-sizing: border-box;
+}
+
+.checkbox-wrapper-16 .checkbox-input {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile {
+  border-color: #f5ab35;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #f5ab35;
+}
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-icon {
+  background-color: #f5ab35;
+}
+
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile:before {
+  transform: scale(1);
+  opacity: 1;
+  background-color: #f5ab35;
+  border-color: #f5ab35;
+}
+
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-icon,
+  .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-label {
+  color: #f5ab35;
+}
+
+.checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile {
+  border-color: #f5ab35;
+  box-shadow: 0 5px 10px rgba(245, 171, 51, .7), 0 0 0 4px #b5c9fc;
+}
+
+.checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.checkbox-wrapper-16 .checkbox-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  min-height: 7rem;
+  border-radius: 0.5rem;
+  border: 2px solid #b5bfd9;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.15s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-wrapper-16 .checkbox-tile:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #b5bfd9;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 0.25rem;
+  left: 0.25rem;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.25s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='://www.w3.org/2000/svg' width='192' height='192' fill='%23FFFFFF' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' fill='none'%3E%3C/rect%3E%3Cpolyline points='216 72.005 104 184 48 128.005' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.checkbox-wrapper-16 .checkbox-tile:hover {
+  border-color: #f5ab35;
+}
+
+.checkbox-wrapper-16 .checkbox-tile:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.checkbox-wrapper-16 .checkbox-icon {
+  transition: 0.375s ease;
+  color: #791313;
+}
+
+.checkbox-wrapper-16 .checkbox-icon svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.checkbox-wrapper-16 .checkbox-label {
+  color: #707070;
+  transition: 0.375s ease;
+  text-align: center;
+}
+
+/* the Other */
+
+#searchEmail{
+  border: none;
+  height: 35px;
+  border-radius: 30px;
+  translate: 0 -8px;
+  padding-right: 10px;
+  margin-left: 5px;
+  font-family: "peydaMedium";
+  width: 60%;
+}
+#searchButton{
+  translate: 0 -8px;
+  border: none;
+  font-family: "peydaMedium";
+  border-radius: 25px;
+  width: 50px;
+  height: 35px;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #0caf2f;
+  color: #ffffff;
+}
+
+.resultSearch{
+  background-color: #ffffff;
+  border: none;
+  height: fit-content;
+  border-radius: 37px;
+  font-family: "peydaMedium";
+  width: 95%;
+  padding: 10px;
+}
+.profile{
+  position: relative;
+  width: 100%;
+  display: block;
+  height: 60px;
+}
+.profile img{
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  right: 0;
+}
+.profile .Email{
+  position: absolute;
+  width: calc(100% - 60px);
+  top: 17px;
+  left: 0;
+  overflow-x: scroll;
+}
+.submitPost{
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  padding: 5px 15px;
+  background-color: #f5ab35;
+  color: #ffffff;
+  font-family: "peydaMedium";
+  border-radius: 5px;
+
+}
